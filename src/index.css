@@ -1,13 +1,174 @@
-body {
+/*
+
+font-family: 'Lato', sans-serif;
+font-family: 'Nunito', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Special Elite', cursive;
+
+*/
+
+/*--- GLOBAL STYLE ---*/
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/*--- SPLASH ---*/
+
+.home {
+  background-image: url("./images/hero-img.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.home-cover {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  /* display: flex; */
+}
+
+/*--- HEADING ---*/
+
+.heading-box {
+  /* border: 2px solid red; */
+  height: 200px;
+  margin: 0 auto;
+  padding-top: 15%;
+}
+
+.heading {
+  font-size: 70px;
+  font-family: "Special Elite", cursive;
+  color: white;
+  text-align: center;
+  letter-spacing: 18px;
+}
+
+/*--- SEARCH ---*/
+
+.search-form {
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 15%;
+}
+
+.form-field {
+  height: 40px;
+  width: 400px;
+  padding: 5px;
+  padding-left: 20px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-family: "Lato", sans-serif;
+}
+
+.btn {
+  margin: 20px;
+  font-size: 34px;
+  padding: 10px 9px 4px 8px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-family: "Special Elite", cursive;
+  font-weight: 700;
+  letter-spacing: 3px;
+  background-color: white;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  background-color: gray;
+  transition: 0.5s;
+}
+
+/*--- BOOK RESULTS ---*/
+
+.book-results {
+  background-color: white;
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+/*--- BOOKS ---*/
+
+.book {
+  position: relative;
+  overflow: hidden;
+  margin: 2%;
+  border: 2px solid #aaa;
+  width: 15%;
+  height: auto;
+  background-color: #ddd;
+  padding: 50px;
+}
+
+.cover {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.book-title {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 22px;
+  font-family: "Special Elite", cursive;
+  line-height: 1.25;
+}
+
+.book-details {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+}
+
+.book-details p {
+  margin-top: 7px;
+}
+
+.book-details a {
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 15px;
+  color: #a81515;
+  font-family: "Special Elite", cursive;
+  font-size: 24px;
+  transition: 0.5s;
+}
+
+.book-details a:hover {
+  color: #550000;
+  transition: 0.5s;
+}
+
+/*--- RESPONSIVE DESIGN ---*/
+
+@media only screen and (max-width: 1000px) {
+  .heading {
+    font-size: 55px;
+    letter-spacing: 14px;
+  }
+
+  .search-form {
+    /* border: 2px solid red; */
+    flex-direction: column;
+  }
+  .book {
+    width: 30%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .book {
+    width: 80%;
+    height: auto;
+  }
 }
