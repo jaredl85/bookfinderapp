@@ -59,7 +59,7 @@ function Main() {
                 <p><strong>Publication Date: </strong> {book.volumeInfo.publishedDate}</p>
                 <p><strong>Publisher: </strong> {book.volumeInfo.publisher}</p>
                 <p><strong>Pages: </strong> {book.volumeInfo.pageCount}</p>
-                <p><strong>Blurb: </strong> {book.searchInfo.textSnippet}</p>
+                <p><strong>Blurb: </strong> {book.searchInfo.textSnippets}</p>
                 <a
                   href={book.volumeInfo.infoLink}
                   className="book-link"
