@@ -38,7 +38,7 @@ function Main() {
     borderRadius: '15px',
     border: '2px solid #aaa',
     width: '50%',
-    height: '60vh',
+    minHeight: '60vh',
     marginLeft: 'auto',
     marginRight: 'auto',
     marginTop: '10%',
