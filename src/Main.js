@@ -33,15 +33,16 @@ function Main() {
   const modalStyle = {
     overlay: {
       backgroundColor: '#aaa',
+      padding: '2%'
     },
     content: {
     borderRadius: '15px',
     border: '2px solid #aaa',
+    height: 'auto',
     width: '50%',
-    minHeight: '60vh',
     marginLeft: 'auto',
     marginRight: 'auto',
-    marginTop: '10%',
+    marginTop: '2%',
     padding: '40px',
     position: 'relative'
     },
@@ -62,7 +63,7 @@ function Main() {
 
       <div className="book-results">
         {result.map((book) => (
-          <article className="book">
+          <article className="book" key={book.id}>
             <img
               src={
                 book.volumeInfo.imageLinks === undefined
@@ -70,7 +71,6 @@ function Main() {
                   : `${book.volumeInfo.imageLinks.thumbnail}`
               }
               alt={book.title}
-              key={book.id}
               className="cover"
             />
             <div className="book-info">
@@ -102,9 +102,9 @@ function Main() {
                   onRequestClose={() => setModalIsOpen(false)}
                   style={modalStyle}
                 >
-                  <IoClose 
-                  onClick={() => setModalIsOpen(false)} 
-                  className="modal-icon"
+                  <IoClose
+                    onClick={() => setModalIsOpen(false)}
+                    className="modal-icon"
                   />
                   <h2 className="modal-title">{book.volumeInfo.title}</h2>
                   <div className="modal-decoration"></div>
