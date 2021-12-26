@@ -79,11 +79,13 @@ font-family: 'Special Elite', cursive;
   letter-spacing: 3px;
   background-color: white;
   transition: 0.5s;
+  color: black;
 }
 
 .btn:hover {
   background-color: gray;
   transition: 0.5s;
+  color: black;
 }
 
 /*--- BOOK RESULTS ---*/
