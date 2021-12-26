@@ -5,12 +5,12 @@ import Heading from './Heading';
 function Home() {
     return (
       <div className="home">
-        <div className="home-cover">
-        <div className="heading-box">
+        <div className="heading-cover">
+          <div className="heading-box">
             <Heading />
+          </div>
         </div>
-          <Main />
-        </div>
+        <Main />
       </div>
     );
 }

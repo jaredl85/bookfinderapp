@@ -1,8 +1,5 @@
 import React, { useState } from "react";
 import axios from "axios";
-import ReactDOM from "react-dom";
-import Modal from "react-modal";
-import { IoClose } from "react-icons/io5";
 
 function Main() {
   const [book, setBook] = useState("");
@@ -10,7 +7,6 @@ function Main() {
   const [apiKey, setApiKey] = useState(
     "AIzaSyDyytQPKTbIll7CG4USKUrpD6xMDRUCDRE"
   );
-  const [modalIsOpen, setModalIsOpen] = useState(false);
 
   function handleChange(event) {
     const book = event.target.value;
@@ -29,24 +25,6 @@ function Main() {
         setResult(data.data.items);
       });
   }
-
-  const modalStyle = {
-    overlay: {
-      backgroundColor: '#aaa',
-      padding: '2%'
-    },
-    content: {
-    borderRadius: '15px',
-    border: '2px solid #aaa',
-    height: 'auto',
-    width: '50%',
-    marginLeft: 'auto',
-    marginRight: 'auto',
-    marginTop: '2%',
-    padding: '40px',
-    position: 'relative'
-    },
-  };
 
   return (
     <div>
@@ -91,31 +69,6 @@ function Main() {
                 <p>
                   <strong>Pages: </strong> {book.volumeInfo.pageCount}
                 </p>
-                <div
-                  className="btn modal-btn"
-                  onClick={() => setModalIsOpen(true)}
-                >
-                  Read the description
-                </div>
-                <Modal
-                  isOpen={modalIsOpen}
-                  onRequestClose={() => setModalIsOpen(false)}
-                  style={modalStyle}
-                >
-                  <IoClose
-                    onClick={() => setModalIsOpen(false)}
-                    className="modal-icon"
-                  />
-                  <h2 className="modal-title">{book.volumeInfo.title}</h2>
-                  <div className="modal-decoration"></div>
-                  <p className="modal-text">{book.volumeInfo.description}</p>
-                  <div
-                    className="btn modal-btn modal-close"
-                    onClick={() => setModalIsOpen(false)}
-                  >
-                    Back to results
-                  </div>
-                </Modal>
                 <a
                   href={book.volumeInfo.infoLink}
                   className="book-details-btn"
