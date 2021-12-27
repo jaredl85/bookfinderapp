@@ -18,7 +18,7 @@ function Main() {
     console.log(book);
     axios
       .get(
-        `https://www.googleapis.com/books/v1/volumes?q=${book}:keyes&key=${apiKey}&maxResults=20`
+        `https://www.googleapis.com/books/v1/volumes?q=${book}&orderBy=relevance&:keyes&key=${apiKey}&maxResults=20`
       )
       .then((data) => {
         console.log(data.data.items);
